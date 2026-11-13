@@ -40,3 +40,5 @@ Quiet white cards, thin gray-green borders, shallow shadow on map pins and float
 Native buttons, select and dialog. Shared map, choices, feedback and travel-card renderers in app.js own recurring behavior. Global visible scrollbar. In-flow loading and feedback preserve layout. Respect reduced motion.
 ## Do's and Don'ts
 Use a location and season with packing questions. Distinguish traditional homes from everyday present-day housing. Teach representative examples without describing a whole culture as one thing. Use actual photographs for food, homes and heritage. Each photograph has a full-image modal and visible creator/source/license attribution. Keep house forms uncropped in thumbnails; the enlargement always shows the entire photo.
+
+Map controls reuse the existing rounded white buttons and teal/ocean palette. Touch targets are at least 48px. Zoom stays local to the map; page scrolling remains available outside it.

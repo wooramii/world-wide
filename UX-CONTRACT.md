@@ -1,5 +1,7 @@
 # Interaction contract
 
+- Map interaction owner: mapHTML / paintMap / pointer delegation in app.js. Explore and location missions share 1–6× pinch zoom, one-finger drag, accessible plus/minus buttons and an original-size reset. Zoom stays within the displayed world/continent bounds. Gestures consume touch only inside the SVG; scroll the page outside the map. A drag or pinch must not select a country or submit an answer. Choosing a country retains the current map viewport; changing continent/view or starting a mission resets it. Actual Galaxy multitouch still requires device verification.
+
 | Capability | Canonical owner | Source of truth | Allowed variants | Verification |
 |---|---|---|---|---|
 | Select/Listbox | Native HTML select | app.js and index.html | Profile / difficulty | Browser profile switch and 4-choice mission |

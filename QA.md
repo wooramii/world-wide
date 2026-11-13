@@ -41,3 +41,10 @@ The premium static auditor was run. Native select ownership is recorded in premi
 - Live GitHub Pages deployment; no repository/account destination was supplied.
 - Independent expert review of every cultural phrase. Content references, regional caveats and source limitations are recorded in SOURCES.md.
 - Browser UI import/export file chooser round-trip; the parser/validation round-trip and rejection paths passed automated checks.
+
+## Live deployment and touch map revision — 2026-11-13
+
+- Public Pages audit: 116 core/media URLs returned HTTP 200 and matched package bytes after the flags upload completed. 26 SVG flags and 78 learning JPEGs are present; live question engine passed 3640 generated cases.
+- Live browser: seven-step Indonesia journey, wrong-answer retry, in-mission photo enlargement, stamp award and persistence after reload passed. 800x1280 viewport had no horizontal overflow; photo modal width was 766px.
+- Map revision: shared 1–6x zoom for exploration and location missions, one-pointer drag, two-pointer pinch, reset and viewport preservation on selection. Node assertions cover zoom anchoring, limits, pan clamping and continent bounds. Native Edge preview confirmed 1.5x zoom, drag without country selection and 6x disabled-plus state.
+- Physical Galaxy pinch gestures, Android speech and actual disconnected use remain unverified. Singapore Merlion attribution contains long source prose; readability improvement remains open.
