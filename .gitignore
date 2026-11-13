@@ -1,0 +1,11 @@
+world-explorer-github.zip
+qa/
+node_modules/
+tools/photo-originals/
+tools/photo-candidates/
+tools/commons-api.lock
+tools/commons-api.time
+tools/*-search.log
+tools/commons-probe.json
+tools/reference-images/
+tools/photo-revision-baseline.json
