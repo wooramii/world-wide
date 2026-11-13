@@ -91,7 +91,7 @@ main.addEventListener('pointermove',e=>{
  const distance=p=>Math.hypot(p[0].x-p[1].x,p[0].y-p[1].y);
  moveMap(svg,after.length>1?distance(after)/Math.max(1,distance(before)):1,center(before),center(after));e.preventDefault();
 });
-function endMapGesture(e){const svg=e.target.closest('svg.world-map')||[...main.querySelectorAll('svg.world-map')].find(el=>mapGestures.get(el)?.points.has(e.pointerId)),g=svg&&mapGestures.get(svg);if(!g)return;g.points.delete(e.pointerId);if(g.moved)g.until=Date.now()+400;if(svg.hasPointerCapture(e.pointerId))svg.releasePointerCapture(e.pointerId);}
+function endMapGesture(e){const svg=e.target.closest('svg.world-map')||[...main.querySelectorAll('svg.world-map')].find(el=>mapGestures.get(el)?.points.has(e.pointerId)),g=svg&&mapGestures.get(svg);if(!g)return;/* A child loses implicit touch capture when the SVG takes over. This is not a finger lift. */if(e.type==='lostpointercapture'&&svg.hasPointerCapture(e.pointerId))return;g.points.delete(e.pointerId);if(g.moved)g.until=Date.now()+400;if(svg.hasPointerCapture(e.pointerId))svg.releasePointerCapture(e.pointerId);}
 for(const event of ['pointerup','pointercancel'])document.addEventListener(event,endMapGesture);main.addEventListener('lostpointercapture',endMapGesture);
 main.addEventListener('click',e=>{const svg=e.target.closest('svg.world-map');if(svg&&mapGestures.get(svg)?.until>Date.now()){e.preventDefault();e.stopPropagation();}},true);
 function go(next){view=next;trip=null;window.speechSynthesis?.cancel();render();main.focus();window.scrollTo({top:0,behavior:'instant'});}
